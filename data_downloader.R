@@ -15,6 +15,7 @@ while (TRUE) {
   
   # checking whether the file_id is U02
   if (const == max_const) {
+    download.file(url_, paste("files/",const, sep=""))
     break
   }
   if (GET(url_)$status ==200) {
@@ -28,5 +29,5 @@ while (TRUE) {
   }
 }
 
-file.create(paste("files/_scraped on",Sys.time()))
+file.create(paste("files/_scraped on",Sys.Date()))
     
